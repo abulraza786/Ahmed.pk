@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My personal.pk</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #content {
+      display: none;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔒 Enter Password to View Website</h2>
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Submit</button>
+
+  <div id="content">
+    <h1>Welcome to sir yassen.</h1>
+    <h2>What is our reply.</h>
+    <p>do not leave we.</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var correctPassword = "9911"; // 🔑 Change this password!
+
+      if (password === correctPassword) {
+        document.getElementById("content").style.display = "block";
+        document.querySelector("h2").style.display = "none";
+        document.querySelector("input").style.display = "none";
+        document.querySelector("button").style.display = "none";
+      } else {
+        alert("Wrong password! Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
